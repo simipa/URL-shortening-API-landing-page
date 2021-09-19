@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+        type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Shortly</title>
+</head>
+
+<body id="bootstrap-overrides">
+    <!-- header -->
+    <div class="bg-light">
+        <div class="container">
+            <div class="row">
+                <nav class="col navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="./images/logo.svg" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div id="navbarContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav ">
+                            <li>
+                                <a class="nav-link text-center " href="#">Features</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-center" href="#">Pricing</a>
+                            </li>
+                            <li>
+                                <a class="nav-link text-center" href="">Ressources</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto ">
+                            <li>
+                                <a class="nav-link text-center " href="#">Login</a>
+                            </li>
+                            <li>
+                                <a class=" nav-link btn  rounded-pill  pl-4 pr-4" href="#" >Sign Up</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="margin-top: 5%; ">
+        <div class="row ">
+            <div class="col-12 col-lg-5 text-center text-lg-left">
+                <h1 style="font-size: 60px; margin-bottom: 1%; font-weight: bold;"> More than just shorter links</h1>
+                <div>
+                    <p  style="margin-bottom: 10%; color: hsl(0, 0%, 75%);">Build your brand’s recognition and get detailed insights
+                    on how your links are performing.</p>
+                </div>
+                
+                <button class="btn rounded-pill text-white">Get started</button>
+            </div>
+            <div class="col-12 col-lg-5 offset-lg-2">
+                <img src="./images/illustration-working.svg" alt="" style="height: 60vh;">
+            </div>
+        </div>
+        <div class="row justify-content-center url-input">
+            <div class="col-12 col-lg-10">
+                <div class="form-inline">
+                    <input type="text" id="link" class="form-control" placeholder="Shorten a link here..."
+
+                        style="width: 100%;">
+                        <div  id="invalid"></div>  
+                </div>
+            </div>
+            <div class="col-12 col-lg-2 text-center">
+                <button class="btn text-white short " type="button" onclick="shorten()">Shorten It!</button>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrap " style="background-color: hsla(0, 0%, 50%, 0.301); padding-top: 20px;">
+        <div class="container">
+            <div id="api">
+            </div>
+        </div>
+
+        <br>
+        <!-- advanced statistics-->
+        <div class="container" style="margin-top: 50px; padding-bottom: 100px;">
+            <div class="row justify-content-center">
+                <h1 class="text-center">Advanced Statistics</h1>
+
+            </div>
+            <div class="row justify-content-center" style="margin: 30px 0 60px 0;  padding: 0 20% 0 20%;">
+                <p class="text-center text-secondary" > Track how your links are performing
+                    across the web with our
+                    advanced statistics dashboard.</p>
+            </div>
+            <!-- cards-->
+            <div class="row">
+                <div class="col-12 col-lg-4 " style="margin-bottom: 60px;">
+                    <div class="card mb-4 mb-lg-0 shadow h-100">
+                        <div class="card-body">
+                            <div class="circle">
+                                <img class="icon" src="./images/icon-brand-recognition.svg" alt="">
+                            </div>
+                            <h5 class="card-title" style="margin-top: 15%; font-size: 30px;">Brand Recognition</h5>
+                            <p class="card-text text-secondary"> Boost your brand recognition with each click. Generic links don’t
+                                mean a thing. Branded links help instil confidence in your content.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4" style="margin-bottom: 60px;">
+                    <div class="card shadow  h-100">
+                        <div class="card-body">
+                            <div class="circle">
+                                <img class="icon" src="./images/icon-detailed-records.svg" alt="">
+                            </div>
+                            <h5 class="card-title" style="margin-top: 15%; font-size: 30px;">Detailed Records</h5>
+                            <p class="card-text text-secondary">Gain insights into who is clicking your links. Knowing when and where
+                                people engage with your content helps inform better decisions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4" style="margin-bottom: 60px;">
+                    <div class="card shadow h-100">
+                        <div class="card-body">
+                            <div class="circle">
+                                <img class="icon" src="./images/icon-fully-customizable.svg" alt="">
+                            </div>
+                            <h5 class="card-title" style="margin-top: 15%; font-size: 30px;">Fully Customizable</h5>
+                            <p class="card-text text-secondary">
+                                Improve brand awareness and content discoverability through customizable
+                                links, supercharging audience engagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- boost your links-->
+    <div class="container-fluid boost" >
+        <div class="row justify-content-center ">
+            <h1 class="text-white text-center">Boost your links today</h1>
+        </div>
+        <div class="row justify-content-center ">
+            <button class="btn rounded-pill text-white" style="margin-top: 15px;">Get Started</button>
+        </div>
+
+    </div>
+    <!-- Footer -->
+<footer class="text-center text-lg-start text-white pb-5" style="background-color: black;" >
+
+      <div class="container text-md-start pt-5">
+
+        <div class="row mt-0 text-lg-left">
+          <div class="col-12 col-lg-3 pb-4">
+            <!-- Logo -->
+            <img src="./images/logo.svg" alt="logo" style="filter:invert(100%);">
+            
+          </div>
+
+          <div class="col-12 col-lg-2 ">
+            <!-- Features -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                Features
+            </h6>
+            <p>
+              <a href="#!" class="text-secondary">Link Shortening</a>
+            </p>
+            <p>
+              <a href="#!" class="text-secondary">Branded Links</a>
+            </p>
+            <p>
+              <a href="#!" class="text-secondary">Analytics</a>
+            </p>
+          </div>
+
+          <div class="col-12 col-lg-2 ">
+            <!-- Resources -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                Resources
+            </h6>
+            <p>
+              <a href="#!" class="text-secondary">Blog</a>
+            </p>
+            <p>
+              <a href="#!" class="text-secondary">Developers</a>
+            </p>
+            <p>
+              <a href="#!" class="text-secondary">Support</a>
+            </p>
+            
+          </div>
+
+          <div class="col-12 col-lg-2 ">
+            <!-- Company -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                Company
+            </h6>
+            <p>
+                <a href="#!" class="text-secondary">About</a>
+              </p>
+              <p>
+                <a href="#!" class="text-secondary">Our Team</a>
+              </p>
+              <p>
+                <a href="#!" class="text-secondary">Careers</a>
+              </p>
+              <p>
+                <a href="#!" class="text-secondary">Contact</a>
+              </p>
+          </div>
+          <div class="col-12 col-lg-3">
+              <a href="#">
+                  <img src="./images/icon-instagram.svg" alt="instagram-icon" class="pl-2 pr-2">
+              </a>
+              <a href="#">
+              <img src="./images/icon-facebook.svg" alt="facebook-icon" class="pl-2 pr-2">
+              </a>
+              <a href="#">
+                <img src="./images/icon-twitter.svg" alt="twitter-icon" class="pl-2 pr-2">  
+              </a>
+              <a href="#">
+               <img src="./images/icon-pinterest.svg" alt="pinterest-icon" class="pl-2 pr-2">   
+              </a>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <!-- Footer -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Yasmine</a>.
+  </div>
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+#bootstrap-overrides
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-weight: bold;
+    background-color: white;
+    font-size: 18px;
+}
+
+@media  (max-width: 1200px){ 
+    .short{
+        margin-top:10px;
+    }
+    .url-input, .short-link{
+        margin: 0 10px 0 10px;
+    }
+    .circle{
+        position: absolute;
+        margin: auto;
+        top: -20px;
+        right: 35px;
+        left: 0;
+    }
+    .copy, .short{
+        width: 100%;  
+    }
+    .card-title, .card-body{
+        text-align: center;
+    }
+    
+     }
+
+.btn{
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+}
+.btn:focus{
+    background-color: hsl(255, 11%, 22%);
+   
+}
+.btn:hover{
+     opacity: 0.8;
+}
+
+.form-inline{
+    align-items: center;
+}
+
+.url-input{
+   
+    background-image: url('./images/bg-shorten-desktop.svg');
+    background-color: hsl(257, 27%, 26%); 
+    background-repeat: no-repeat; 
+    border-radius: 10px; 
+    align-items: center;
+    padding:   4% 0  4%  0;
+}
+.boost{
+    background-image: url('./images/bg-boost-desktop.svg');
+    background-color: hsl(257, 27%, 26%); 
+    background-repeat: no-repeat; 
+    align-items: center;
+    padding:   4% 0  4%  0;
+}
+
+.short-link{
+   
+    margin-bottom: 10px;
+    border-radius: 10px; 
+    align-items: center;
+}
+.card-body {
+    position: relative;
+}
+
+
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: hsl(255, 11%, 22%);
+    position: absolute;
+    margin: auto;
+    top: -35px;
+    left: 10%;
+}
+
+.icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:20%;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
