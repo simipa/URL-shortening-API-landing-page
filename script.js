@@ -1,7 +1,6 @@
-/// https://example.com/assets/category_B/subcategory_C/Foo/
-
 /* short link api*/
 let myurl;
+let shortURL;
 function shorten() {
     myurl = document.getElementById("link").value;
 
@@ -9,6 +8,7 @@ function shorten() {
     function success() {
         
         let data = JSON.parse(this.responseText);
+        shortURL = data.result.short_link;
         console.log("done");
         switch (data.error_code) {
             case 1:
@@ -53,9 +53,13 @@ function shorten() {
 /*copy short link*/
 
 function copy() {
-    if (myurl) {
-        document.querySelector(".copy").innerHTML="Copied!";
-    }
+      document.querySelector(".copy").innerHTML="Copied!";
+        const el = document.createElement('textarea');
+        el.value = shortURL;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
 }
 
 
